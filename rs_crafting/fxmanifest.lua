@@ -4,7 +4,7 @@ rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aw
 
 author 'riversafe'
 description 'Craf System'
-version '1.0'
+version '2.0'
 
 ui_page {
 	'html/ui.html'
