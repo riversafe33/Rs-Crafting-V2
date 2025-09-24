@@ -115,6 +115,7 @@ Config.CraftingProps = {
                     -- Add the necessary items for the recipe.
                 },
                 Reward = {
+                    -- name = item name in the DB -- count = amount of rewards -- image = image shown in the menu
                     {name = "water", count = 1, image = "water.png"}
                 },
             },
