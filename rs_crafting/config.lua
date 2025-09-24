@@ -121,7 +121,7 @@ Config.CraftingProps = {
         }
     },
     -- add more prop, to open menu crafting
-    --[[{  -- delete this { --[[ }
+    --[[{
         Items = {
             {
                 Text = "",
@@ -140,7 +140,7 @@ Config.CraftingProps = {
                 },
             },
         }
-    },]]--  -- delete this { ]]-- }
+    },]]--
 }
 
 Config.Anim = {
