@@ -115,32 +115,32 @@ Config.CraftingProps = {
                     -- Add the necessary items for the recipe.
                 },
                 Reward = {
-                    -- name = item name in the DB -- count = amount of rewards -- image = image shown in the menu
                     {name = "water", count = 1, image = "water.png"}
                 },
             },
         }
     },
     -- add more prop, to open menu crafting
-    -- {
-    --     Items = {
-    --         {
-    --             Text = "",
-    --             Category = false, -- Category = false, is displayed directly in the list -- Category = "Drink", For example, it is shown within the beverage category
-    --             Job = false, -- Job = false, all players can access the crafting -- Job = {"salonvl", "salonsd"}, Only players with those jobs can see and craft it
-    --             Type = "", -- crafting type: item or weapon
-    --             Animation = 'craft', -- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish',
-    --             props =  {""},
-    --             Items = {
-    --                 {name = "", label = "", count = 1, image = ".png"},
-    --                 --  Add the necessary items for the recipe.
-    --             },
-    --             Reward = {
-    --                 {name = "", count = 1, image = ".png"}
-    --             },
-    --         },
-    --     }
-    -- },
+    --[[{  -- delete this { --[[ }
+        Items = {
+            {
+                Text = "",
+                Category = false, -- Category = false, is displayed directly in the list -- Category = "Drink", For example, it is shown within the beverage category
+                Job = false, -- Job = false, all players can access the crafting -- Job = {"salonvl", "salonsd"}, Only players with those jobs can see and craft it
+                Type = "", -- crafting type: item or weapon
+                Animation = 'craft', -- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish',
+                props =  {""},
+                Items = {
+                    {name = "", label = "", count = 1, image = ".png"},
+                       --  Add the necessary items for the recipe.
+                },
+                Reward = {
+                       -- name = item name in the DB -- count = amount of rewards -- image = image shown in the menu
+                    {name = "", count = 1, image = ".png"}
+                },
+            },
+        }
+    },]]--  -- delete this { ]]-- }
 }
 
 Config.Anim = {
