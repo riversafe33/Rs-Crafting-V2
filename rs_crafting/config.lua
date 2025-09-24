@@ -29,7 +29,7 @@ Config.ShowBlip = true
 Config.BlipZone = {
     -- Location blip for craft enterprise
     {coords = vector3(-314.34, 809.98, 118.98),       blips = 1879260108, blipsName = "Valentine Saloon",},      -- Valentine Saloon
-    {coords = vector3(2640.24, -1228.82, 53.38),      blips = 1879260108, blipsName = "Saint Denis Saloon",},      -- Foundry Valentine
+    {coords = vector3(2640.24, -1228.82, 53.38),      blips = 1879260108, blipsName = "Saint Denis Saloon",},    -- Saint Denis Saloon
 
 }
 
