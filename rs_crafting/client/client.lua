@@ -139,7 +139,7 @@ RegisterNUICallback("craftItem", function(data, cb)
     if quantity and quantity > 0 then
         TriggerServerEvent('rs_crafting:startCrafting', selectedItem, quantity)
     else
-        TriggerEvent("vorp:TipRight", "Cantidad inválida", 3000)
+        TriggerEvent("vorp:TipRight", Config.Texts.Notify.invalidamount, 3000)
     end
 
     SetNuiFocus(false, false)
