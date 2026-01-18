@@ -48,7 +48,7 @@ Config.CraftingZones = {
                         Category = "Meal", -- Category = false, is displayed directly in the list -- Category = "Meal", For example, it is shown within the food category
                         Job = {"salonvl", "salonsd"},   -- you can add as many jobs as you want, even just one so only that business sees the recipe -- Job = false, all players can access the crafting
                         Type = "item",                  -- crafting type: item or weapon
-                        Animation = 'craft',            -- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish',
+                        Animation = 'craft',            -- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish', -- 'plane', -- 'saw',
                         Items = {                       -- list of required items for crafting
                             -- name = item name in the DB -- label = name shown in the menu -- count = required amount -- image = image shown in the menu
                             {name = "bread", label = "Bread", count = 1, image = "bread.png"}, 
@@ -65,7 +65,7 @@ Config.CraftingZones = {
                         Category = "Drink", -- Category = false, is displayed directly in the list -- Category = "Drink", For example, it is shown within the beverage category
                         Job = {"salonvl", "salonsd"},   -- you can add as many jobs as you want, even just one so only that business sees the recipe -- Job = fasle, all players can access the crafting
                         Type = "item",                  -- crafting type: item or weapon
-                        Animation = 'craft',            -- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish', 
+                        Animation = 'craft',            -- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish', -- 'plane', -- 'saw',
                         Items = {                       -- list of required items for crafting
                             -- name = item name in the DB -- label = name shown in the menu -- count = required amount -- image = image shown in the menu
                             {name = "bread", label = "Bread", count = 1, image = "bread.png"}, 
@@ -94,7 +94,7 @@ Config.CraftingProps = {
                 Category = false, -- Category = false, is displayed directly in the list -- Category = "Drink", For example, it is shown within the beverage category
                 Job = false, -- Job = false, all players can access the crafting -- Job = {"salonvl", "salonsd"}, Only players with those jobs can see and craft it
                 Type = "item",
-                Animation = 'knifecooking',-- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish',
+                Animation = 'knifecooking',-- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish', -- 'plane', -- 'saw',
                 props = {"p_campfire05x", "p_campfire04x", "s_cookfire01x", "p_campfire01x"},
                 Items = {
                     {name = "water", label = "Water", count = 2, image = "water.png"},
@@ -129,7 +129,7 @@ Config.CraftingProps = {
                 Category = false, -- Category = false, is displayed directly in the list -- Category = "Drink", For example, it is shown within the beverage category
                 Job = false, -- Job = false, all players can access the crafting -- Job = {"salonvl", "salonsd"}, Only players with those jobs can see and craft it
                 Type = "", -- crafting type: item or weapon
-                Animation = 'craft', -- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish',
+                Animation = 'craft', -- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish', -- 'plane', -- 'saw',
                 props =  {""},
                 Items = {
                     {name = "", label = "", count = 1, image = ".png"},
