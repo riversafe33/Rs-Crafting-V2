@@ -28,7 +28,8 @@
       color: var(--text-primary);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
+      text-rendering: auto;
+      font-feature-settings: "kern" 1, "liga" 1, "lnum" 1;
     }
 
     .hidden { display: none !important; }
@@ -37,14 +38,11 @@
     @media (min-height: 900px)  { html { font-size: 15px; } }
     @media (min-height: 1200px) { html { font-size: 17px; } }
 
-    /* ── Contenedor principal ── */
     #crafting-container {
       position: absolute;
       top: 50%;
       right: 2.5%;
       transform: translateY(-50%);
-      /* QUITADO: will-change:transform — reservaba capa GPU innecesaria */
-      /* QUITADO: translateZ(0) — promovía al compositor sin motivo */
       width: clamp(300px, 34vw, 520px);
       height: clamp(480px, 78vh, 900px);
       background: var(--bg-deep);
@@ -53,11 +51,9 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      /* SIMPLIFICADO: una sola sombra exterior, quitado inset que fuerza stencil buffer */
       box-shadow: 0 24px 64px rgba(0, 0, 0, 0.85);
     }
 
-    /* Línea decorativa superior */
     #crafting-container::before {
       content: '';
       position: absolute;
@@ -68,7 +64,6 @@
       pointer-events: none;
     }
 
-    /* ── Header ── */
     .menu-header {
       padding: 1.4rem 1.6rem 0.8rem;
       flex-shrink: 0;
@@ -106,7 +101,6 @@
       color: var(--gold-light);
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      text-shadow: none;
     }
 
     .menu-header p {
@@ -117,7 +111,6 @@
       margin-top: 0.25rem;
     }
 
-    /* ── Categorías ── */
     .category-list {
       display: flex;
       flex-wrap: wrap;
@@ -139,7 +132,6 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       cursor: pointer;
-      /* ACOTADO: solo propiedades que cambian, no 'all' */
       transition: background 0.2s, border-color 0.2s, color 0.2s;
     }
 
@@ -150,7 +142,6 @@
       color: var(--gold-light);
     }
 
-    /* ── Grid ── */
     #items-grid {
       flex: 1 1 0;
       min-height: 0;
@@ -167,7 +158,6 @@
     #items-grid::-webkit-scrollbar-track { background: transparent; }
     #items-grid::-webkit-scrollbar-thumb { background: var(--scrollbar); border-radius: 4px; }
 
-    /* ── Cards ── */
     .item-card {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
@@ -183,7 +173,6 @@
       flex-shrink: 0;
       min-height: 200px;
       height: fit-content;
-      /* ACOTADO: solo border-color y background */
       transition: border-color 0.2s, background 0.2s;
     }
 
@@ -201,12 +190,10 @@
     .item-card:hover {
       border-color: var(--border-main);
       background: var(--bg-card-hover);
-      /* SIN transform: evita repaints y promoción de capa */
     }
 
     .item-card:hover::before { opacity: 1; }
 
-    /* ── Imagen ── */
     .item-image-wrap {
       width: clamp(56px, 5vw, 80px);
       height: clamp(56px, 5vw, 80px);
@@ -223,11 +210,8 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      /* QUITADO: image-rendering:-webkit-optimize-contrast — forzaba reprocesado */
-      /* Para pixel art usa: image-rendering: pixelated; */
     }
 
-    /* ── Texto ── */
     .item-name {
       font-size: 0.75rem;
       color: var(--text-primary);
@@ -236,7 +220,6 @@
       line-height: 1.3;
     }
 
-    /* ── Input cantidad ── */
     .quantity-input {
       width: 100%;
       padding: 0.35rem 0.5rem;
@@ -246,7 +229,8 @@
       background: rgba(10, 7, 3, 0.6);
       color: var(--text-primary);
       text-align: center;
-      font-family: 'Georgia', serif;
+      font-family: 'Courier New', monospace;
+      font-feature-settings: "lnum" 1, "tnum" 1;
       transition: border-color 0.2s;
       -moz-appearance: textfield;
     }
@@ -259,7 +243,6 @@
     .quantity-input::-webkit-outer-spin-button,
     .quantity-input::-webkit-inner-spin-button { -webkit-appearance: none; }
 
-    /* ── Acciones ── */
     .card-actions {
       display: flex;
       gap: 0.35rem;
@@ -278,7 +261,6 @@
       cursor: pointer;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      /* ACOTADO */
       transition: background 0.2s, border-color 0.2s, color 0.2s;
     }
 
@@ -308,7 +290,6 @@
       color: var(--text-primary);
     }
 
-    /* ── Botón cerrar ── */
     #close-btn {
       margin: 0.5rem 1rem 0.9rem;
       flex-shrink: 0;
@@ -331,13 +312,11 @@
       background: rgba(180, 140, 60, 0.06);
     }
 
-    /* ── Panel ingredientes ── */
     #ingredients-panel {
       position: absolute;
       bottom: 6%;
       left: 50%;
       transform: translateX(-50%);
-      /* QUITADO: translateZ(0) innecesario */
       width: clamp(260px, 52vw, 520px);
       max-height: clamp(220px, 38vh, 380px);
       background: var(--bg-surface);
@@ -346,7 +325,6 @@
       padding: 1rem;
       z-index: 999;
       overflow-y: auto;
-      /* SIMPLIFICADO: una sola sombra, quitado inset */
       box-shadow: 0 8px 32px rgba(0,0,0,0.8);
     }
 
@@ -396,7 +374,6 @@
       background: rgba(180, 140, 60, 0.1);
     }
 
-    /* ── Materiales ── */
     .materials {
       display: flex;
       flex-wrap: wrap;
@@ -432,6 +409,8 @@
       font-size: 0.82rem;
       color: var(--gold);
       font-weight: bold;
+      font-family: 'Courier New', monospace;
+      font-feature-settings: "lnum" 1, "tnum" 1;
       background: rgba(14, 10, 5, 0.9);
       border-radius: 3px;
       padding: 0 3px;
@@ -445,7 +424,6 @@
       line-height: 1.2;
     }
 
-    /* ── Prompts ── */
     .container-prompmenu,
     .container-prompprop {
       position: absolute;
@@ -466,13 +444,11 @@
       letter-spacing: 0.05em;
     }
 
-    /* ── Barra de progreso ── */
     #crafting-progress {
       position: absolute;
       bottom: 4%;
       left: 50%;
       transform: translateX(-50%);
-      /* QUITADO: translateZ(0) */
       width: clamp(180px, 22vw, 280px);
       text-align: center;
       z-index: 9999;
@@ -502,7 +478,6 @@
       height: 100%;
       width: 0%;
       background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
-      /* ACOTADO: solo width */
       transition: width 0.1s linear;
       border-radius: 2px;
     }
@@ -552,7 +527,6 @@
     let progressInterval;
     let prompt = {};
 
-    // Reutilizar el fragment para un solo reflow al renderizar cards
     function createItemCard(item) {
       const card = document.createElement("div");
       card.className = "item-card";
@@ -582,7 +556,6 @@
       card.querySelector(".toggle-ingredients-btn").addEventListener("click", () => {
         const panel = document.getElementById("ingredients-panel");
         document.getElementById("ingredients-title").textContent = item.label;
-        // DocumentFragment: un solo reflow al insertar todos los materiales
         const frag = document.createDocumentFragment();
         item.descriptionimages.forEach(mat => {
           const div = document.createElement("div");
@@ -637,13 +610,12 @@
       }
 
       if (data.type === "openCraftingMenuGrouped") {
-        const container      = document.getElementById("crafting-container");
+        const container       = document.getElementById("crafting-container");
         const categoryButtons = document.getElementById("category-buttons");
-        const grid           = document.getElementById("items-grid");
+        const grid            = document.getElementById("items-grid");
 
         currentCategories = data.categories;
 
-        // Limpiar y reconstruir categorías con fragment
         const catFrag = document.createDocumentFragment();
         for (const category of Object.keys(currentCategories)) {
           const btn = document.createElement("button");
