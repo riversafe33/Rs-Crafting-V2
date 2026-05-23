@@ -72,14 +72,14 @@ AddEventHandler('rs_crafting:openMenuClient', function(allItems, playerjob)
         local allowedJobs = craft.Job or false
         local category = craft.Category
 
-        local isAllowed = allowedJobs == false or
-            (type(allowedJobs) == "string" and allowedJobs == playerjob) or
-            (type(allowedJobs) == "table" and table.contains(allowedJobs, playerjob))
+        local isAllowed = allowedJobs == false
+            or (type(allowedJobs) == "string" and allowedJobs == playerjob)
+            or (type(allowedJobs) == "table" and table.contains(allowedJobs, playerjob))
 
         if isAllowed then
             hasAllowedItems = true
 
-            local rewardImage = craft.Reward and craft.Reward[1] and craft.Reward[1].image or "default.png"
+            local rewardImage = craft.Reward and craft.Reward[1] and (craft.Reward[1].name .. ".png") or "default.png"
 
             local element = {
                 label = craft.Text,
@@ -90,12 +90,13 @@ AddEventHandler('rs_crafting:openMenuClient', function(allItems, playerjob)
 
             for _, item in ipairs(craft.Items) do
                 table.insert(element.descriptionimages, {
-                    src = "nui://vorp_inventory/html/img/items/" .. item.image,
+                    src = "nui://vorp_inventory/html/img/items/" .. item.name .. ".png",
                     text = item.label,
                     count = " x " .. item.count,
                 })
             end
 
+            -- Agrupa por categoría o sin categoría
             if category == false or category == nil then
                 table.insert(uncategorizedItems, element)
             else
@@ -227,7 +228,8 @@ AddEventHandler('rs_crafting:openPropMenu', function(_, propToCheck, playerJob)
                 if isAllowed then
                     hasAllowedItems = true
 
-                    local rewardImage = item.Reward and item.Reward[1] and item.Reward[1].image or "default.png"
+                    local rewardImage = item.Reward and item.Reward[1] and (item.Reward[1].name .. ".png") or "default.png"
+
                     local formattedItem = {
                         label = item.Text or "Sin nombre",
                         value = item,
@@ -237,7 +239,7 @@ AddEventHandler('rs_crafting:openPropMenu', function(_, propToCheck, playerJob)
 
                     for _, reqItem in ipairs(item.Items or {}) do
                         table.insert(formattedItem.descriptionimages, {
-                            src = "nui://vorp_inventory/html/img/items/" .. (reqItem.image or "default.png"),
+                            src = "nui://vorp_inventory/html/img/items/" .. reqItem.name .. ".png",
                             text = reqItem.label or "Desconocido",
                             count = " x " .. tostring(reqItem.count or 0),
                         })
