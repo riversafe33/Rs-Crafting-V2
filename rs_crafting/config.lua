@@ -50,14 +50,14 @@ Config.CraftingZones = {
                         Type = "item",                  -- crafting type: item or weapon
                         Animation = 'craft',            -- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish', -- 'plane', -- 'saw',
                         Items = {                       -- list of required items for crafting
-                            -- name = item name in the DB -- label = name shown in the menu -- count = required amount -- image = image shown in the menu
-                            {name = "bread", label = "Bread", count = 1, image = "bread.png"}, 
-                            {name = "water", label = "Water", count = 2, image = "water.png"},
+                            -- name = item name in the DB -- label = name shown in the menu -- count = required amount
+                            {name = "bread", label = "Bread", count = 1}, 
+                            {name = "water", label = "Water", count = 2},
                             -- Add the necessary items for the recipe.
                         },
                         Reward = {
-                            -- name = item name in the DB -- count = amount of rewards -- image = image shown in the menu
-                            {name = "bread", count = 5, image = "bread.png"}
+                            -- name = item name in the DB -- count = amount of rewards
+                            {name = "bread", count = 5}
                         },
                     },
                     {
@@ -67,14 +67,14 @@ Config.CraftingZones = {
                         Type = "item",                  -- crafting type: item or weapon
                         Animation = 'craft',            -- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish', -- 'plane', -- 'saw',
                         Items = {                       -- list of required items for crafting
-                            -- name = item name in the DB -- label = name shown in the menu -- count = required amount -- image = image shown in the menu
-                            {name = "bread", label = "Bread", count = 1, image = "bread.png"}, 
-                            {name = "water", label = "Water", count = 2, image = "water.png"},
+                            -- name = item name in the DB -- label = name shown in the menu -- count = required amount
+                            {name = "bread", label = "Bread", count = 1}, 
+                            {name = "water", label = "Water", count = 2},
                             -- Add the necessary items for the recipe.
                         },
                         Reward = {
-                            -- name = item name in the DB -- count = amount of rewards -- image = image shown in the menu
-                            {name = "water", count = 5, image = "water.png"}
+                            -- name = item name in the DB -- count = amount of rewards
+                            {name = "water", count = 5}
                         },
                     },
                     -- add more recipes for these locations
@@ -97,11 +97,11 @@ Config.CraftingProps = {
                 Animation = 'knifecooking',-- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish', -- 'plane', -- 'saw',
                 props = {"p_campfire05x", "p_campfire04x", "s_cookfire01x", "p_campfire01x"},
                 Items = {
-                    {name = "water", label = "Water", count = 2, image = "water.png"},
+                    {name = "water", label = "Water", count = 2},
                     -- Add the necessary items for the recipe.
                 },
                 Reward = {
-                    {name = "bread", count = 1, image = "bread.png"}
+                    {name = "bread", count = 1}
                 },
             },
             {
@@ -112,11 +112,11 @@ Config.CraftingProps = {
                 Animation = 'knifecooking',
                 props = {"p_campfire05x", "p_campfire04x", "s_cookfire01x", "p_campfire01x"},
                 Items = {
-                    {name = "bread", label = "Bread", count = 1, image = "bread.png"},
+                    {name = "bread", label = "Bread", count = 1},
                     -- Add the necessary items for the recipe.
                 },
                 Reward = {
-                    {name = "water", count = 1, image = "water.png"}
+                    {name = "water", count = 1}
                 },
             },
         }
@@ -132,12 +132,12 @@ Config.CraftingProps = {
                 Animation = 'craft', -- type of animation, -- 'craft', -- 'spindlecook', -- 'knifecooking', -- 'fish', -- 'plane', -- 'saw',
                 props =  {""},
                 Items = {
-                    {name = "", label = "", count = 1, image = ".png"},
+                    {name = "", label = "", count = 1},
                        --  Add the necessary items for the recipe.
                 },
                 Reward = {
-                       -- name = item name in the DB -- count = amount of rewards -- image = image shown in the menu
-                    {name = "", count = 1, image = ".png"}
+                       -- name = item name in the DB -- count = amount of rewards
+                    {name = "", count = 1}
                 },
             },
         }
