@@ -1,4 +1,4 @@
-# Donations
+# Buy me a beer :beer:  :heart: 
 
 https://www.paypal.com/donate/?hosted_button_id=NX4ENSGYS6YJN
 
