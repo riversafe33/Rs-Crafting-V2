@@ -1,7 +1,5 @@
 # Donations
 
-https://ko-fi.com/riversafe33
-
 https://www.paypal.com/donate/?hosted_button_id=NX4ENSGYS6YJN
 
 https://ko-fi.com/riversafe33
