@@ -12,4 +12,4 @@ https://ko-fi.com/riversafe33
 
 3 - Props can now also be assigned by job.
 
-<img width="961" height="652" alt="image" src="https://github.com/user-attachments/assets/24a6bf60-f045-4446-a7a7-af4535649863" />
+<img width="1575" height="983" alt="image" src="https://github.com/user-attachments/assets/a0f253f8-3960-4370-a88c-ce269b04f6c1" />
