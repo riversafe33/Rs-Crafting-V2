@@ -1,10 +1,8 @@
-I create and share digital tools with passion and purpose.
+# Donations
 
-There’s absolutely no pressure to donate, but if my work has been helpful to you, any contribution is sincerely appreciated.
+https://ko-fi.com/riversafe33
 
-Your support goes directly toward upgrading my PC and developing more free scripts for everyone.
-
-Thank you for your support! ❤️
+https://www.paypal.com/donate/?hosted_button_id=NX4ENSGYS6YJN
 
 https://ko-fi.com/riversafe33
 
